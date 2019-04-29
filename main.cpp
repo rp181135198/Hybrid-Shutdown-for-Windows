@@ -1,9 +1,14 @@
 #include<stdlib.h>
+#include<stdio.h>
 int main()
 {
-    system("Hybrid-Shutdown-for-Windows");
+    char input;
+    system("echo Hybrid-Shutdown-for-Windows");
     system("echo ATTENTION");
     system("echo This will shutdown your Computer and prepare it for fast startup.");
-    system("Do you want to Proceed? (Y/N) : ");
+    system("echo Do you want to Proceed? (Y/N) : ");
+    input=getchar();
+    if(input=='Y'||input=='y')
+        system("shutdown /s /hybrid /t 00");
     return 0;
 }
