@@ -1,0 +1,31 @@
+#define VOS_NT_WINDOWS32    0x00040004L
+#define VFT_APP             0x00000001L
+
+//this will set your .exe icon
+A ICON MOVEABLE PURE LOADONCALL DISCARDABLE "HSW.ico"
+
+//include version information in .exe, modify these values to match your needs
+1 VERSIONINFO
+FILEVERSION 0,1,1,1
+PRODUCTVERSION 0,1,1,1
+FILETYPE VFT_APP
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904E4"
+        {
+            VALUE "FileDescription",    "https://github.com/rp181135198"
+            VALUE "FileVersion",        "1.0.0.0"
+            VALUE "InternalName",       "Hybrid-Shutdown-for-Windows.exe"
+            VALUE "LegalCopyright",     "CodeWar | Ramesh Prasad"
+            VALUE "OriginalFilename",   "Hybrid-Shutdown-for-Windows.exe"
+            VALUE "ProductName",        "Hybrid Shutdown for Windows"
+            VALUE "ProductVersion",     "1.0"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0409, 1252 //language codes
+    }
+}
+
