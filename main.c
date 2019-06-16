@@ -3,7 +3,7 @@
 
 int main()
 {
-    int time;
+    unsigned int time;
     char option,command[40];
     system("cls");
     system("echo ////////////////////////////////////////////////////////////////////////////");
@@ -23,8 +23,8 @@ int main()
     if(option=='Y' || option=='y')
     {
         system("echo Enter time in seconds : ");
-        scanf("%d",&time);
-        sprintf(command,"shutdown /s /hybrid /t 0%d",time);
+        scanf("%u",&time);
+        sprintf(command,"shutdown /s /hybrid /t %u",time);
         system(command);
         system("exit");
     }
